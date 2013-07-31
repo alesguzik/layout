@@ -2,27 +2,33 @@
 nextroot
     visit
         term
-            s 1
-            tmux
+            s 4
+            t tmux
+                s 2
+                t 'z web'
+                t 'r start'
+                tmuxctl percent o quotedbl
+        s 5
         emacs
-            s 5
+        s 5
 
 prevroot
     visit
     mkframe
     mkframe
+    s 1
     tile_main_left
         visit
-            run 5 firefox
+            run 15 firefox
         next
         tile_mix
-            run 3 thunderbird
+            run 10 thunderbird
         leave
     leave
 mkframe
 tile_space
     visit
-        run 3 skype
+        run 10 skype
             k Tab Tab
             t echo123
             k Return

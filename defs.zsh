@@ -2,12 +2,13 @@ PGUP=Prior
 PGDN=Next
 
 s(){ sleep "$@" }
-k(){ xdotool key --delay 100 "$@"; s 1 }
+kk(){ xdotool key --delay 150 "$@" }
+k(){ kk "$@"; s 1 }
 ret(){ k Return }
-tt(){ xdotool type "$@" }
+tt(){ xdotool type --delay 100 "$@" }
 t(){ tt "$@"; ret }
 
-sm(){ k Alt+t "$@" }
+sm(){ k Alt+t ; k "$@" }
 visit(){ k Alt+Up }
 leave(){ k Alt+Down }
 next(){ k Alt+Right }
@@ -26,8 +27,7 @@ swaproot(){ sm Ctrl+$PGUP }
 current_root(){ k Alt+Return }
 toggleterm(){ k Ctrl+F12 }
 term(){ sm t }
-tmctl(){ echo "$@" |xargs -d ' ' -I_ echo Ctrl+b _ |xargs xdotool key }
-tmux(){ t tmux; tmctl percent o quotedbl }
+tmuxctl(){ echo "$@" |xargs -d ' ' -I_ echo Ctrl+b _ |xargs xdotool key }
 emacs(){ sm Shift+e }
 tile_main_left(){ sm f l f l Return y Return }
 tile_mix(){ sm f l e m y Return }

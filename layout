@@ -1,4 +1,8 @@
 #!/usr/bin/env zsh
+START="$(date +%s)"
 WORKDIR="$(dirname "$(readlink -f "$0")")"
 source "$WORKDIR/defs.zsh"
 source "$WORKDIR/presets/${1:-$(hostname -s)}"
+END="$(date +%s)"
+TIMING="$(date '+%M:%S' --date "@$((END-START))")"
+notify-send -a layout Layout "Setup finished in $TIMING"
