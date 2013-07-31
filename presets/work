@@ -10,7 +10,7 @@ nextroot
                 tmuxctl percent o quotedbl
         s 5
         emacs
-        s 5
+        s 7
 
 prevroot
     visit
