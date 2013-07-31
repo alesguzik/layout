@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+WORKDIR="$(dirname "$(readlink -f "$0")")"
+source "$WORKDIR/defs.zsh"
+source "$WORKDIR/presets/${1:-$(hostname -s)}"

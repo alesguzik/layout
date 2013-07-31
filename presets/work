@@ -1,0 +1,38 @@
+    leave
+nextroot
+    visit
+        term
+            s 1
+            tmux
+        emacs
+            s 5
+
+prevroot
+    visit
+    mkframe
+    mkframe
+    tile_main_left
+        visit
+            run 5 firefox
+        next
+        tile_mix
+            run 3 thunderbird
+        leave
+    leave
+mkframe
+tile_space
+    visit
+        run 3 skype
+            k Tab Tab
+            t echo123
+            k Return
+    with_window x
+    next
+        visit
+        with_window v
+        prev
+        leave
+    current_root
+
+nextroot
+    current_root
