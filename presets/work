@@ -6,11 +6,12 @@ nextroot
             t tmux
                 s 2
                 t 'z web'
-                t 'r start'
+                s 1
+                t 'sleep 60 && zeus start'
                 tmuxctl percent o quotedbl
-        s 5
+        s 12
         emacs
-        s 7
+        s 1
 
 prevroot
     visit
