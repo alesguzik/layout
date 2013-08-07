@@ -28,7 +28,7 @@ current_root(){ k Alt+Return }
 toggleterm(){ k Ctrl+F12 }
 term(){ sm t }
 tmuxctl(){ echo "$@" |xargs -d ' ' -I_ echo Ctrl+b _ |xargs xdotool key }
-emacs(){ sm Shift+e }
+emacs(){ sm e }
 tile_main_left(){ sm f l f l Return y Return }
 tile_mix(){ sm f l e m y Return }
 tile_space(){ sm f l e s Return y Return }
