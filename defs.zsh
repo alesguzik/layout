@@ -2,7 +2,7 @@ PGUP=Prior
 PGDN=Next
 
 s(){ sleep "$@" }
-kk(){ xdotool key --delay 150 "$@" }
+kk(){ xdotool key --delay 120 "$@" }
 k(){ kk "$@"; s 1 }
 ret(){ k Return }
 tt(){ xdotool type --delay 100 "$@" }
